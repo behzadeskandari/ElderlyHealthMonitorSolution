@@ -7,8 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="BLE\" />
-    <Folder Include="Preprocessing\" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ElderlyHealthMonitor.Application\ElderlyHealthMonitor.Application.csproj" />
   </ItemGroup>
 
 </Project>

@@ -12,6 +12,7 @@ namespace ElderlyHealthMonitor.Domain.Entities
         [Key] public Guid Id { get; set; } = Guid.NewGuid();
         public Guid? EventId { get; set; }
         public Guid ElderlyProfileId { get; set; }
+        public Guid? CaregiverId { get; set; }
         public Guid UserId { get; set; } // Caregiver
         public DateTime SentAtUtc { get; set; } = DateTime.UtcNow;
         public string Status { get; set; } = "Open"; // Open/Acked/Closed

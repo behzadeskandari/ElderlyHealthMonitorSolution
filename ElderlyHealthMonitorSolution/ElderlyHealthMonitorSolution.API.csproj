@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Hubs\" />
+    <ProjectReference Include="..\ElderlyHealthMonitor.Application\ElderlyHealthMonitor.Application.csproj" />
   </ItemGroup>
 
 </Project>

@@ -9,7 +9,6 @@
   <ItemGroup>
     <Folder Include="ML\" />
     <Folder Include="ExternalServices\" />
-    <Folder Include="Repositories\" />
   </ItemGroup>
 
   <ItemGroup>

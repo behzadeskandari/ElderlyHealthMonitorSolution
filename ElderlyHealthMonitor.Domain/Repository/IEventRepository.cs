@@ -7,10 +7,8 @@ using ElderlyHealthMonitor.Domain.Entities;
 
 namespace ElderlyHealthMonitor.Application.Interfaces
 {
-    public interface IElderlyRepository
+    public interface IEventRepository
     {
-        Task<ElderlyProfile> GetByIdAsync(Guid id);
-        Task AddAsync(ElderlyProfile elderly);
-        Task<IEnumerable<ElderlyProfile>> GetAllAsync();
+        Task AddAsync(Event ev, CancellationToken ct = default);
     }
 }

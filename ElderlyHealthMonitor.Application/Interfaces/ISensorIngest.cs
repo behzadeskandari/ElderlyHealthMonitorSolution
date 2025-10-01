@@ -16,6 +16,6 @@ namespace ElderlyHealthMonitor.Application.Interfaces
 
         void DetectHeartRateAnomaly(double hr);
 
-        void EmitEvent(EventType, ElderlyId, Severity)
+        void EmitEvent(EventType, ElderlyId, Severity);
     }
 }
