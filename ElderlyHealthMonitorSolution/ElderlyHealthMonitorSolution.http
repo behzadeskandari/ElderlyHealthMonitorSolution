@@ -1,0 +1,6 @@
+@ElderlyHealthMonitorSolution_HostAddress = http://localhost:5094
+
+GET {{ElderlyHealthMonitorSolution_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
