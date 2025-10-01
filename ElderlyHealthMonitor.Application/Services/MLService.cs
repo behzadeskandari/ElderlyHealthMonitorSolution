@@ -34,12 +34,13 @@ namespace ElderlyHealthMonitor.Application.Services
             var data = _ml.Data.LoadFromEnumerable(values);
 
 
-            var pipeline = _ml.Transforms.DetectIidSpike(outputColumnName: "Prediction", inputColumnName: nameof(SimpleFeature.Value), pvalueHistoryLength: 30, alarmingThreshold: 95);
+            //var pipeline = _ml.Transforms.DetectIidSpike(outputColumnName: "Prediction", inputColumnName: nameof(SimpleFeature.Value), pvalueHistoryLength: 30, alarmingThreshold: 95);
+            var pipeline = _ml.Transforms.DetectIidSpike(outputColumnName: "Prediction",inputColumnName: nameof(SingleValue.Value), confidence: 95.0,pvalueHistoryLength: 30);
             var model = pipeline.Fit(data);
 
 
             // Score last sample
-            using var engine = _ml.Model.CreateTimeSeriesEngine<SimpleFeature, SpikePrediction>(model);
+            using var engine = _ml.Model.CreatePredictionEngine<SimpleFeature, SpikePrediction>(model);
             var last = values.LastOrDefault();
             if (last == null) return new AnomalyResult(false, 0);
             var pred = engine.Predict(last);
@@ -86,18 +87,14 @@ namespace ElderlyHealthMonitor.Application.Services
 
             // create spike detector transform
             var pipeline = _ml.Transforms.DetectIidSpike(
-                outputColumnName: "Prediction",
-                inputColumnName: nameof(SingleValue.Value),
-                pvalueHistoryLength: 30, // tune
-                trainingWindowSize: 30,
-                confidence: 95);
+                outputColumnName: "Prediction", inputColumnName: nameof(SingleValue.Value), confidence: 95.0, pvalueHistoryLength: 30);
 
             var transformer = pipeline.Fit(data);
 
             // Use TimeSeries prediction engine if available
             try
             {
-                var engine = _ml.Model.CreateTimeSeriesEngine<SingleValue, SpikePrediction>(transformer);
+                var engine = _ml.Model.CreatePredictionEngine<SingleValue, SpikePrediction>(transformer);
                 var last = values.Last();
                 var pred = engine.Predict(last);
                 var isSpike = pred.Prediction[0] == 1;
@@ -115,6 +112,7 @@ namespace ElderlyHealthMonitor.Application.Services
             }
         }
 
+     
         Task<FallResult> IMLService.DetectFallAsync(IEnumerable<SensorReadingDto> window, CancellationToken ct)
         {
             throw new NotImplementedException();

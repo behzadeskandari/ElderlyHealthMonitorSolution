@@ -20,14 +20,17 @@ namespace ElderlyHealthMonitor.Application.Services
         private readonly IMapper _mapper;
         private readonly IHubContext<AlertHub> _hub;
 
+        private readonly INotificationPublisher _publisher;
 
-        public AlertService(IAlertRepository alertRepo, IEventRepository eventRepo, IMapper mapper, IHubContext<AlertHub> hub)
+        public AlertService(IAlertRepository alertRepo, IEventRepository eventRepo, IMapper mapper, IHubContext<AlertHub> hub, INotificationPublisher publisher)
         {
             _alertRepo = alertRepo;
             _eventRepo = eventRepo;
             _mapper = mapper;
-            _hub = hub;
+            _hub = hub; 
+            _publisher = publisher;
         }
+
 
 
         public async Task<AlertDto> CreateAlertAsync(EventDto evDto, Guid? caregiverId = null, CancellationToken ct = default)

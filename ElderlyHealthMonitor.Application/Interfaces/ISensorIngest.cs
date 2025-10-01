@@ -13,9 +13,9 @@ namespace ElderlyHealthMonitor.Application.Interfaces
     {
         void SaveReadings(List<SensorReadingDto> SensorReadingDtolst);
 
-        void Preprocess(SensorReadingWindow SensorReadingWindow);
+        void Preprocess(SensorReadingDto SensorReadingWindow);
 
-        void DetectFall(SensorReadingWindow SensorReadingWindow);
+        void DetectFall(SensorReadingDto SensorReadingWindow);
 
         void DetectHeartRateAnomaly(double hr);
 
