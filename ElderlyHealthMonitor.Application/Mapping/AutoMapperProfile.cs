@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using ElderlyHealthMonitor.Application.DTOs;
 using ElderlyHealthMonitor.Domain.Entities;
+using ElderlyHealthMonitor.DTOS.DTO;
 
 namespace ElderlyHealthMonitor.Application.Mapping
 {

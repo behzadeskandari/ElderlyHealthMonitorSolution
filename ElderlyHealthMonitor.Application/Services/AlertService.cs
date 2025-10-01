@@ -8,6 +8,8 @@ using ElderlyHealthMonitor.Application.DTOs;
 using ElderlyHealthMonitor.Application.Interfaces;
 using ElderlyHealthMonitor.Domain.Entities;
 using ElderlyHealthMonitor.Domain.Repository;
+using ElderlyHealthMonitorSolution.API.Hubs;
+using Microsoft.AspNetCore.SignalR;
 
 namespace ElderlyHealthMonitor.Application.Services
 {

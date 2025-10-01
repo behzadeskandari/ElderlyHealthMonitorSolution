@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ElderlyHealthMonitor.Application.DTOs;
+using ElderlyHealthMonitor.Domain.Enums;
+using ElderlyHealthMonitor.DTOS.DTO;
 
 namespace ElderlyHealthMonitor.Application.Interfaces
 {
@@ -16,6 +19,6 @@ namespace ElderlyHealthMonitor.Application.Interfaces
 
         void DetectHeartRateAnomaly(double hr);
 
-        void EmitEvent(EventType, ElderlyId, Severity);
+        void EmitEvent(EventType eventType,int ElderlyId,AlertSeverity Severity);
     }
 }

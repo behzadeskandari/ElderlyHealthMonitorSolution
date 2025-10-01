@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElderlyHealthMonitor.Application.DTOs
+namespace ElderlyHealthMonitor.Application.Records
 {
-    internal class EventDto
-    {
-    }
+    public record AnomalyResult(bool IsAnomaly, double Score);
 }

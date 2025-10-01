@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using ElderlyHealthMonitor.Application.DTOs;
 using ElderlyHealthMonitor.Application.Interfaces;
+using ElderlyHealthMonitor.Application.Records;
+using ElderlyHealthMonitor.DTOS.DTO;
+using ElderlyHealthMonitor.Edge.Preprocessing;
 using Microsoft.ML;
 using Microsoft.ML.Data;
 
@@ -73,6 +76,15 @@ namespace ElderlyHealthMonitor.Application.Services
             return new FallResult(p.PredictedLabel, p.Probability);
         }
 
+        Task<AnomalyResult> IMLService.DetectBehavioralAnomalyAsync(Guid elderlyId, IEnumerable<SensorReadingDto> readings, CancellationToken ct)
+        {
+            throw new NotImplementedException();
+        }
+
+        Task<FallResult> IMLService.DetectFallAsync(IEnumerable<SensorReadingDto> window, CancellationToken ct)
+        {
+            throw new NotImplementedException();
+        }
 
         private class SimpleFeature { public float Value { get; set; } }
         private class SpikePrediction { [VectorType(3)] public double[] Prediction { get; set; } = new double[3]; public double[] Score { get; set; } = new double[3]; }
@@ -80,6 +92,7 @@ namespace ElderlyHealthMonitor.Application.Services
 
         // fall model input classes
         private class FallInput { [VectorType(64)] public float[] Features { get; set; } = new float[64]; }
-        private class FallPrediction { public bool PredictedLabel { get; set; } public float Probability { get; set; } public float Score { get; set; } }
+        private class FallPrediction { public bool PredictedLabel { get; set; } 
+        public float Probability { get; set; } public float Score { get; set; } }
     }
 }

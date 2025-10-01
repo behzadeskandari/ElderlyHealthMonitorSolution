@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ElderlyHealthMonitor.Application.DTOs;
+using ElderlyHealthMonitor.DTOS.DTO;
 
 namespace ElderlyHealthMonitor.Edge.Preprocessing
 {

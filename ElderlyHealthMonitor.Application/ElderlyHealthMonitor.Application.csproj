@@ -13,11 +13,14 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="15.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Core" Version="1.2.0" />
     <PackageReference Include="Microsoft.ML" Version="4.0.2" />
+    <PackageReference Include="Microsoft.ML.TimeSeries" Version="4.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ElderlyHealthMonitor.Domain\ElderlyHealthMonitor.Domain.csproj" />
+    <ProjectReference Include="..\ElderlyHealthMonitor.Edge\ElderlyHealthMonitor.Edge.csproj" />
   </ItemGroup>
 
 </Project>

@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ElderlyHealthMonitor.Application.DTOs;
+using ElderlyHealthMonitor.Application.Records;
 using ElderlyHealthMonitor.Domain.Entities;
+using ElderlyHealthMonitor.DTOS.DTO;
 
 namespace ElderlyHealthMonitor.Application.Interfaces
 {

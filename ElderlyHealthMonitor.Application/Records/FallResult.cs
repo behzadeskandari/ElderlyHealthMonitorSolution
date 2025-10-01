@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElderlyHealthMonitor.Application.DTOs
+namespace ElderlyHealthMonitor.Application.Records
 {
-    public class SensorReadingDto
-    {
-    }
+    public record FallResult(bool IsFall, double Confidence);
 }

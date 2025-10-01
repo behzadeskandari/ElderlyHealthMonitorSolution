@@ -1,6 +1,7 @@
 ﻿using ElderlyHealthMonitor.Application.Interfaces;
 using ElderlyHealthMonitor.Application.DTOs;
 using Microsoft.AspNetCore.Mvc;
+using ElderlyHealthMonitor.DTOS.DTO;
 
 namespace ElderlyHealthMonitorSolution.API.Controllers
 {

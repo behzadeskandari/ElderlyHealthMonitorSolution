@@ -7,11 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.9" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\ElderlyHealthMonitor.DTO\ElderlyHealthMonitor.DTO.csproj" />
+    <ProjectReference Include="..\ElderlyHealthMonitor.Domain\ElderlyHealthMonitor.Domain.csproj" />
   </ItemGroup>
 
 </Project>

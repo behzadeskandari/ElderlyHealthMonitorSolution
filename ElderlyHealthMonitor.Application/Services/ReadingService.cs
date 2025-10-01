@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using AutoMapper;
 using ElderlyHealthMonitor.Application.DTOs;
 using ElderlyHealthMonitor.Application.Interfaces;
 using ElderlyHealthMonitor.Domain.Entities;
-using Newtonsoft.Json;
+using ElderlyHealthMonitor.DTOS.DTO;
 
 namespace ElderlyHealthMonitor.Application.Services
 {
