@@ -7,6 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.ML.FastTree" Version="4.0.2" />
+    <PackageReference Include="Microsoft.ML.ImageAnalytics" Version="4.0.2" />
+    <PackageReference Include="Microsoft.ML.OnnxTransformer" Version="4.0.2" />
     <PackageReference Include="Microsoft.ML.TimeSeries" Version="4.0.2" />
   </ItemGroup>
 
