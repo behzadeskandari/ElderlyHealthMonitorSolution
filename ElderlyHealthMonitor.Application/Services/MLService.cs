@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ElderlyHealthMonitor.Application.DTOs;
 using ElderlyHealthMonitor.Application.Interfaces;
+using Microsoft.ML;
 using Microsoft.ML.Data;
 
 namespace ElderlyHealthMonitor.Application.Services
