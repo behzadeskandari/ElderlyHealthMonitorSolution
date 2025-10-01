@@ -78,7 +78,41 @@ namespace ElderlyHealthMonitor.Application.Services
 
         Task<AnomalyResult> IMLService.DetectBehavioralAnomalyAsync(Guid elderlyId, IEnumerable<SensorReadingDto> readings, CancellationToken ct)
         {
-            throw new NotImplementedException();
+            // prepare numeric stream (example: use Value field)
+            var values = readings.Where(r => r.Value.HasValue).Select(r => new SingleValue { Value = (float)r.Value!.Value }).ToList();
+            if (!values.Any()) return Task.FromResult(new AnomalyResult(false, 0.0));
+
+            var data = _ml.Data.LoadFromEnumerable(values);
+
+            // create spike detector transform
+            var pipeline = _ml.Transforms.DetectIidSpike(
+                outputColumnName: "Prediction",
+                inputColumnName: nameof(SingleValue.Value),
+                pvalueHistoryLength: 30, // tune
+                trainingWindowSize: 30,
+                confidence: 95);
+
+            var transformer = pipeline.Fit(data);
+
+            // Use TimeSeries prediction engine if available
+            try
+            {
+                var engine = _ml.Model.CreateTimeSeriesEngine<SingleValue, SpikePrediction>(transformer);
+                var last = values.Last();
+                var pred = engine.Predict(last);
+                var isSpike = pred.Prediction[0] == 1;
+                return Task.FromResult(new AnomalyResult(isSpike, pred.Score[0]));
+            }
+            catch (MissingMethodException)
+            {
+                // Fallback: compute last row transform and inspect output column
+                var transformed = transformer.Transform(data);
+                var preds = _ml.Data.CreateEnumerable<SpikePrediction>(transformed, reuseRowObject: false).ToList();
+                var lastPred = preds.LastOrDefault();
+                if (lastPred == null) return Task.FromResult(new AnomalyResult(false, 0));
+                var isSpike = lastPred.Prediction[0] == 1;
+                return Task.FromResult(new AnomalyResult(isSpike, lastPred.Score[0]));
+            }
         }
 
         Task<FallResult> IMLService.DetectFallAsync(IEnumerable<SensorReadingDto> window, CancellationToken ct)
@@ -89,7 +123,7 @@ namespace ElderlyHealthMonitor.Application.Services
         private class SimpleFeature { public float Value { get; set; } }
         private class SpikePrediction { [VectorType(3)] public double[] Prediction { get; set; } = new double[3]; public double[] Score { get; set; } = new double[3]; }
 
-
+        private class SingleValue { public float Value { get; set; } }
         // fall model input classes
         private class FallInput { [VectorType(64)] public float[] Features { get; set; } = new float[64]; }
         private class FallPrediction { public bool PredictedLabel { get; set; } 
