@@ -13,4 +13,8 @@
     <Folder Include="Services\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ElderlyHealthMonitor.Domain\ElderlyHealthMonitor.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
