@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ElderlyHealthMonitor.Domain\ElderlyHealthMonitor.Domain.csproj" />
+    <ProjectReference Include="..\ElderlyHealthMonitor.DTO\ElderlyHealthMonitor.DTO.csproj" />
     <ProjectReference Include="..\ElderlyHealthMonitor.Edge\ElderlyHealthMonitor.Edge.csproj" />
     <ProjectReference Include="..\ElderlyHealthMonitor.ML\ElderlyHealthMonitor.ML.csproj" />
   </ItemGroup>

@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ElderlyHealthMonitor.Application\ElderlyHealthMonitor.Application.csproj" />
+    <ProjectReference Include="..\ElderlyHealthMonitor.DTO\ElderlyHealthMonitor.DTO.csproj" />
   </ItemGroup>
 
 </Project>

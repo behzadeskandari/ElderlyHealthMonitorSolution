@@ -3,31 +3,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36401.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElderlyHealthMonitorSolution.API", "ElderlyHealthMonitorSolution\ElderlyHealthMonitorSolution.API.csproj", "{8EC549EB-977F-431B-83C8-D4AD238E3BAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElderlyHealthMonitorSolution.API", "ElderlyHealthMonitorSolution\ElderlyHealthMonitorSolution.API.csproj", "{8EC549EB-977F-431B-83C8-D4AD238E3BAD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElderlyHealthMonitor.Application", "ElderlyHealthMonitor.Application\ElderlyHealthMonitor.Application.csproj", "{FEACA147-4CA9-4332-AC0F-F8C35AAE58CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElderlyHealthMonitor.Application", "ElderlyHealthMonitor.Application\ElderlyHealthMonitor.Application.csproj", "{FEACA147-4CA9-4332-AC0F-F8C35AAE58CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElderlyHealthMonitor.Infrastructure", "ElderlyHealthMonitor.Infrastructure\ElderlyHealthMonitor.Infrastructure.csproj", "{E978B06E-B54A-428D-BBA4-4A35D9F9BC40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElderlyHealthMonitor.Infrastructure", "ElderlyHealthMonitor.Infrastructure\ElderlyHealthMonitor.Infrastructure.csproj", "{E978B06E-B54A-428D-BBA4-4A35D9F9BC40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElderlyHealthMonitor.Domain", "ElderlyHealthMonitor.Domain\ElderlyHealthMonitor.Domain.csproj", "{3A188D91-9A60-4038-BD13-33D82FA5F644}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElderlyHealthMonitor.Domain", "ElderlyHealthMonitor.Domain\ElderlyHealthMonitor.Domain.csproj", "{3A188D91-9A60-4038-BD13-33D82FA5F644}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElderlyHealthMonitor.Edge", "ElderlyHealthMonitor.Edge\ElderlyHealthMonitor.Edge.csproj", "{3C0CA8C6-37D9-4F34-A645-0649FC01D3ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElderlyHealthMonitor.Edge", "ElderlyHealthMonitor.Edge\ElderlyHealthMonitor.Edge.csproj", "{3C0CA8C6-37D9-4F34-A645-0649FC01D3ED}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B8A81EE0-6B9F-4E63-966B-8856235E9D60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElderlyHealthMonitor.Domain.Tests", "ElderlyHealthMonitor.Domain.Tests\ElderlyHealthMonitor.Domain.Tests.csproj", "{309A8B30-D873-425D-BD13-E6BF55015131}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElderlyHealthMonitor.Domain.Tests", "ElderlyHealthMonitor.Domain.Tests\ElderlyHealthMonitor.Domain.Tests.csproj", "{309A8B30-D873-425D-BD13-E6BF55015131}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{10896F96-4030-4524-BB7E-62D2C277142B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{FD60903D-73CE-491F-A13C-9F7FD756AE84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElderlyHealthMonitor.ML", "ElderlyHealthMonitor.ML\ElderlyHealthMonitor.ML.csproj", "{C2C9ECE1-59AE-45B7-AF3C-2C960A7EDEE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElderlyHealthMonitor.ML", "ElderlyHealthMonitor.ML\ElderlyHealthMonitor.ML.csproj", "{C2C9ECE1-59AE-45B7-AF3C-2C960A7EDEE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElderlyHealthMonitor.Shared", "ElderlyHealthMonitor.Shared\ElderlyHealthMonitor.Shared.csproj", "{E4753510-3C41-454E-A7AB-63644BA5ECA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElderlyHealthMonitor.Shared", "ElderlyHealthMonitor.Shared\ElderlyHealthMonitor.Shared.csproj", "{E4753510-3C41-454E-A7AB-63644BA5ECA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElderlyHealthMonitor.DTO", "ElderlyHealthMonitor.DTO\ElderlyHealthMonitor.DTO.csproj", "{0426FB8E-12DD-40CB-9799-AEF7C038B68A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElderlyHealthMonitor.DTO", "ElderlyHealthMonitor.DTO\ElderlyHealthMonitor.DTO.csproj", "{0426FB8E-12DD-40CB-9799-AEF7C038B68A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElderlyHealthMonitorSolution.ML.Test", "ElderlyHealthMonitorSolution.ML.Test\ElderlyHealthMonitorSolution.ML.Test.csproj", "{5A3A01E5-1EF2-43CC-A8C9-AAB6983B75D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +73,10 @@ Global
 		{0426FB8E-12DD-40CB-9799-AEF7C038B68A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0426FB8E-12DD-40CB-9799-AEF7C038B68A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0426FB8E-12DD-40CB-9799-AEF7C038B68A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A3A01E5-1EF2-43CC-A8C9-AAB6983B75D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A3A01E5-1EF2-43CC-A8C9-AAB6983B75D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A3A01E5-1EF2-43CC-A8C9-AAB6983B75D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A3A01E5-1EF2-43CC-A8C9-AAB6983B75D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,6 +90,7 @@ Global
 		{309A8B30-D873-425D-BD13-E6BF55015131} = {B8A81EE0-6B9F-4E63-966B-8856235E9D60}
 		{C2C9ECE1-59AE-45B7-AF3C-2C960A7EDEE8} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{0426FB8E-12DD-40CB-9799-AEF7C038B68A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{5A3A01E5-1EF2-43CC-A8C9-AAB6983B75D5} = {B8A81EE0-6B9F-4E63-966B-8856235E9D60}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {171622D9-8837-474F-AC33-43B99C34988F}
