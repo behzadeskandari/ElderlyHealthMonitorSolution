@@ -9,7 +9,6 @@ using InTheHand.Bluetooth;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using ElderlyHealthMonitor.Shared.Models;
 using InTheHand.Bluetooth;  // مثال پکیج BLE
 using System.Linq;
 
