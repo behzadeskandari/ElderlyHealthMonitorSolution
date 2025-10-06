@@ -55,7 +55,7 @@ namespace ElderlyHealthMonitor.Edge.Services
 
             // فعال کردن نوتیفای
             await hrChar.StartNotificationsAsync();
-            hrChar.ValueChanged += HrChar_ValueChanged;
+            hrChar.CharacteristicValueChanged += HrChar_ValueChanged;
 
             // شاید بخوای بعضی charهای دیگر (قدم، شتاب) هم فعال کنی
         }
